@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Basit Chat Uygulaması</title>
+</head>
+<body>
+  <input id="username" placeholder="Kullanıcı adı" required />
+  <input id="message" placeholder="Mesaj yaz..." required />
+  <button id="send">Gönder</button>
+
+  <div id="messages"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: url('abugat-noel-geldi-lansman-konseri-81808.avif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  #chat-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 0 10px black;
+  }
+
+  #messages {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+
+  input, button {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+
+  #username {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #message {
+    width: 75%;
+  }
+
+  #send {
+    width: 23%;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  #send:hover {
+    background-color: #45a049;
+  }
+</style>
