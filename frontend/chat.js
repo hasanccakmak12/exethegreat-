@@ -35,3 +35,7 @@ function getColorForUsername(username) {
   const index = Math.abs(hash) % COLORS.length;
   return COLORS[index];
 }
+const msg = document.createElement("div");
+msg.classList.add("message");
+msg.classList.add(data.username === username ? "you" : "other");
+msg.textContent = `${data.username}: ${data.message}`;
