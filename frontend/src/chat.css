@@ -19,3 +19,8 @@
   color: #41464b;
   align-self: flex-start;
 }
+body {
+  background-image: url("emirkara");
+  background-size: cover;
+  background-position: center;
+}
